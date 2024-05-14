@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="date=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+        content="initial-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no, width=device-width">
+    <title>Grave Card Creator</title>
+    <meta name="color-scheme" content="dark light">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicons/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#ff0000">
+    <meta name="msapplication-TileColor" content="#ff0000">
+    <meta name="theme-color" content="#ff0000">
+</head>
+
+<body>
+    <div class="font-hack2 sr-only" style="font-family:'Montserrat';visibility:hidden;">Nothing to see here, move
+        along…</div>
+    <div class="font-hack5 sr-only" style="font-family:RomanAntique';visibility:hidden;">Nothing to see here, move
+                along…</div>
+
+    <div class="container-fluid">
+
+        <nav class="mt-2 navbar navbar-expand-lg p-0">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://optimalgamestate.com"><img src="assets/img/ogs_logo.png"
+                                width="150" height="30"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html" onclick="onClearCache()">Cards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="instructions.html" onclick="onClearCache()">Instructions</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+
+        <div class="row mt-3">
+
+    <div class="col-lg-4">
+        <img id="art" style="display: none;" src="assets/img/card/art.png">
+        <img id="bg1" style="display: none;" src="assets/img/card/blank.png">
+        <img id="border" style="display: none;" src="assets/img/card/border.png">
+        <img id="frostgrave_hero" style="display: none;" src="assets/img/card/frostgrave_hero.png">
+        <img id="stargrave_hero" style="display: none;" src="assets/img/card/stargrave_hero.png">
+        <img id="frostgrave_spell" style="display: none;" src="assets/img/card/frostgrave_spell.png">
+        <img id="stargrave_ability" style="display: none;" src="assets/img/card/stargrave_ability.png">
+        <img id="frostgrave_weapon" style="display: none;" src="assets/img/card/frostgrave_weapon.png">
+        <img id="stargrave_weapon" style="display: none;" src="assets/img/card/stargrave_weapon.png">
+        <img id="frostgrave_soldier" style="display: none;" src="assets/img/card/frostgrave_soldier.png">
+        <img id="stargrave_soldier" style="display: none;" src="assets/img/card/stargrave_soldier.png">
+        <img id="m_img" style="display: none;" src="assets/img/card/m.png">
+        <img id="f_img" style="display: none;" src="assets/img/card/f.png">
+        <img id="s_img" style="display: none;" src="assets/img/card/s.png">
+        <img id="a_img" style="display: none;" src="assets/img/card/a.png">
+        <img id="w_img" style="display: none;" src="assets/img/card/w.png">
+        <img id="h_img" style="display: none;" src="assets/img/card/h.png">
+        <img id="g_img" style="display: none;" src="assets/img/card/g.png">
+        <img id="r_img" style="display: none;" src="assets/img/card/r.png">
+        <img id="d_img" style="display: none;" src="assets/img/card/d.png">
+        <img id="cost_img" style="display: none;" src="assets/img/card/cost.png">
+
+
+        <canvas class="canvas rounded" id="canvas" width="822" height="1122 ">
+            Sorry, your browser doesn't support the &lt;canvas&gt; element.
+        </canvas>
+    </div>
+
+    <div class="col-lg-5 scroll-area-fade">
+        <div class="scroll-area">
+            <div class="accordion">
+
+                <div class="card">
+
+    <div class="card-header" id="fightersHeadingFive">
+        <h2 class="h5 mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#fightersCollapseFive"
+                aria-expanded="false" aria-controls="fightersCollapseFive">
+                Card Stats
+            </button>
+        </h2>
+    </div>
+
+    <div class="collapse" id="fightersCollapseFive">
+        <div class="card-body">
+
+            <div class="form-group">
+                <label for="cardName">Card Name</label>
+                <input class="form-control" type="text" id="cardName" name="cardName" value=" " oninput="onAnyChange()">
+            </div>
+
+  
+
+            <div class="form-group">
+                <label for="cardType">Card Type</label>
+                <select class="form-control" id="cardType" name="cardType" onchange="onAnyChange()">
+                    <optgroup label="Card Type">
+                        <option value="frostgrave_hero">Frostgrave Hero</option>
+                        <option value="frostgrave_spell">Frostgrave Spell</option>
+                        <option value="frostgrave_weapon">Frostgrave Weapon</option>
+                        <option value="frostgrave_soldier">Frostgrave Soldier</option>
+
+                        <option value="stargrave_hero">Stargrave Hero</option>
+                        <option value="stargrave_ability" >Stargrave Ability</option>
+                        <option value="stargrave_weapon" >Stargrave Weapon</option>
+                        <option value="stargrave_soldier" >Stargrave Soldier</option>
+                </optgroup>
+                </select>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="m">Move</label>
+                        <input class="form-control" id="m" maxlength="3" name="m" oninput="onAnyChange()" type="text" value="6">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="f">Fight</label>
+                        <input class="form-control" id="f" maxlength="3" name="f" oninput="onAnyChange()" type="text" value="3">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="s">Shoot</label>
+                        <input class="form-control" id="s" maxlength="3" name="s" oninput="onAnyChange()" type="text" value="2">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="a">Armour</label>
+                        <input class="form-control" id="a" maxlength="3" name="a" oninput="onAnyChange()" type="text" value="9">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="w">Willpower</label>
+                        <input class="form-control" id="w" maxlength="3" name="w" oninput="onAnyChange()" type="text" value="3">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="h">Health</label>
+                        <input class="form-control" id="h" maxlength="3" name="h" oninput="onAnyChange()" type="text" value="16">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="g">Gear</label>
+                        <input class="form-control" id="g" maxlength="3" name="g" oninput="onAnyChange()" type="text" value="6">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="r">Range</label>
+                        <input class="form-control" id="r" maxlength="3" name="r" oninput="onAnyChange()" type="text" value="NA">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="d">Damage</label>
+                        <input class="form-control" id="d" maxlength="3" name="d" oninput="onAnyChange()" type="text" value="NA">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="cost">Cost</label>
+                        <input class="form-control" id="cost" maxlength="5" name="cost" oninput="onAnyChange()" type="text" value="NA">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="act">Activation</label>
+                        <input class="form-control" id="act" maxlength="3" name="act" oninput="onAnyChange()" type="text" value="NA">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="st">Strain</label>
+                        <input class="form-control" id="st" maxlength="3" name="st" oninput="onAnyChange()" type="text" value="NA">
+                    </div>
+                </div>
+
+            </div>
+            
+
+             
+            <div class="form-group">
+                <label for="cardText">Abilities</label>
+                <textarea class="form-control" id="cardText" name="cardText" rows="5"
+                    oninput="onAnyChange()">Body Text</textarea>
+            </div>
+            <div class="form-group">
+                <label for="fontSize">Font Size</label>
+                <input type="number" class="form-control" id="fontSize" name="fontSize" min="10" max="50" value="28" oninput="onAnyChange()">
+            </div>
+
+            <div class="form-group">
+                <label for="spellType">Spell Type</label>
+                <input class="form-control" type="text" id="spellType" name="spellType" value=" " oninput="onAnyChange()">
+            </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                <div class="card">
+
+    <div class="card-header" id="fightersHeadingTwo">
+        <h2 class="h5 mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#fightersCollapseTwo" aria-expanded="false"
+                aria-controls="fightersCollapseTwo">
+                Card image
+            </button>
+        </h2>
+    </div>
+
+    <div class="collapse" id="fightersCollapseTwo">
+        <div class="card-body">
+
+            <div class="form-group">
+                <label for="imageSelect">Load image</label>
+                <input class="form-control-file" id="imageSelect" oninput="onFighterImageUpload()" type="file">
+            </div>
+
+            <input type="hidden" id="fighterImageUrl" name="fighterImageUrl" value="">
+
+            <div class="form-group">
+                <label for="imageOffsetX">X offset (&#8596;)</label>
+                <input class="form-control" id="imageOffsetX" oninput="onAnyChange()" type="number" value="0" />
+            </div>
+
+            <div class="form-group">
+                <label for="imageOffsetY">Y offset (&#8597;)</label>
+                <input class="form-control" id="imageOffsetY" oninput="onAnyChange()" type="number" value="0" />
+            </div>
+
+            <div class="form-group">
+                <label for="imageScalePercent">Scale (%)</label>
+                <input class="form-control" id="imageScalePercent" min="0" max="300" oninput="onAnyChange()"
+                    type="number" value="100" />
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+            </div>
+
+            
+<div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="removeBorder" onchange="onAnyChange()">
+    <label class="form-check-label" for="removeBorder">Remove border to add bleed area for printing</label>
+</div>
+<div class="mt-4">
+    <button type="submit" class="btn btn-success" id="saveCanvasButton" onclick="saveCardAsImage()">
+        Save card as image
+    </button>
+</div>
+
+<div class="mt-4">
+    <button type="submit" class="btn btn-success" id="saveButton" onclick="onSaveClicked()">
+        Save card as file
+    </button>
+</div>
+
+<div class="mt-4">
+    <label for="loadbutton">Load card file</label>
+    <input class="form-control-file" id="loadbutton" oninput="fileChange(this.files[0])" type="file">
+</div>
+
+<div class="mt-4">
+    <button type="submit" class="btn btn-success" id="clearCacheButton" onclick="onClearCache()">
+        Reset all
+    </button>
+</div>
+
+<div class="input-group mb-6 mt-2">
+    <br>
+    <br>
+</div>
+
+        </div>
+    </div>
+
+</div>
+
+    </div>
+
+    <script src="assets/vendors/jquery.js"></script>
+    <script src="assets/vendors/popper.min.js"></script>
+    <script src="assets/vendors/bootstrap.min.js"></script>
+    <script src="assets/js/card.js"></script>
+
+</body>
+
+</html>

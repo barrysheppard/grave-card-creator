@@ -1,0 +1,136 @@
+<div class="card">
+
+    <div class="card-header" id="fightersHeadingFive">
+        <h2 class="h5 mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#fightersCollapseFive"
+                aria-expanded="false" aria-controls="fightersCollapseFive">
+                Card Stats
+            </button>
+        </h2>
+    </div>
+
+    <div class="collapse" id="fightersCollapseFive">
+        <div class="card-body">
+
+            <div class="form-group">
+                <label for="cardName">Card Name</label>
+                <input class="form-control" type="text" id="cardName" name="cardName" value=" " oninput="onAnyChange()">
+            </div>
+
+  
+
+            <div class="form-group">
+                <label for="cardType">Card Type</label>
+                <select class="form-control" id="cardType" name="cardType" onchange="onAnyChange()">
+                    <optgroup label="Card Type">
+                        <option value="frostgrave_hero">Frostgrave Hero</option>
+                        <option value="frostgrave_spell">Frostgrave Spell</option>
+                        <option value="frostgrave_weapon">Frostgrave Weapon</option>
+                        <option value="frostgrave_soldier">Frostgrave Soldier</option>
+
+                        <option value="stargrave_hero">Stargrave Hero</option>
+                        <option value="stargrave_ability" >Stargrave Ability</option>
+                        <option value="stargrave_weapon" >Stargrave Weapon</option>
+                        <option value="stargrave_soldier" >Stargrave Soldier</option>
+                </optgroup>
+                </select>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="m">Move</label>
+                        <input class="form-control" id="m" maxlength="3" name="m" oninput="onAnyChange()" type="text" value="6">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="f">Fight</label>
+                        <input class="form-control" id="f" maxlength="3" name="f" oninput="onAnyChange()" type="text" value="3">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="s">Shoot</label>
+                        <input class="form-control" id="s" maxlength="3" name="s" oninput="onAnyChange()" type="text" value="2">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="a">Armour</label>
+                        <input class="form-control" id="a" maxlength="3" name="a" oninput="onAnyChange()" type="text" value="9">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="w">Willpower</label>
+                        <input class="form-control" id="w" maxlength="3" name="w" oninput="onAnyChange()" type="text" value="3">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="h">Health</label>
+                        <input class="form-control" id="h" maxlength="3" name="h" oninput="onAnyChange()" type="text" value="16">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="g">Gear</label>
+                        <input class="form-control" id="g" maxlength="3" name="g" oninput="onAnyChange()" type="text" value="6">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="r">Range</label>
+                        <input class="form-control" id="r" maxlength="3" name="r" oninput="onAnyChange()" type="text" value="NA">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="d">Damage</label>
+                        <input class="form-control" id="d" maxlength="3" name="d" oninput="onAnyChange()" type="text" value="NA">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="cost">Cost</label>
+                        <input class="form-control" id="cost" maxlength="5" name="cost" oninput="onAnyChange()" type="text" value="NA">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="act">Activation</label>
+                        <input class="form-control" id="act" maxlength="3" name="act" oninput="onAnyChange()" type="text" value="NA">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="st">Strain</label>
+                        <input class="form-control" id="st" maxlength="3" name="st" oninput="onAnyChange()" type="text" value="NA">
+                    </div>
+                </div>
+
+            </div>
+            
+
+             
+            <div class="form-group">
+                <label for="cardText">Abilities</label>
+                <textarea class="form-control" id="cardText" name="cardText" rows="5"
+                    oninput="onAnyChange()">Body Text</textarea>
+            </div>
+            <div class="form-group">
+                <label for="fontSize">Font Size</label>
+                <input type="number" class="form-control" id="fontSize" name="fontSize" min="10" max="50" value="28" oninput="onAnyChange()">
+            </div>
+
+            <div class="form-group">
+                <label for="spellType">Spell Type</label>
+                <input class="form-control" type="text" id="spellType" name="spellType" value=" " oninput="onAnyChange()">
+            </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+

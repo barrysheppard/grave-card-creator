@@ -1,0 +1,47 @@
+<div class="row mt-3">
+
+    <div class="col-lg-4">
+        <img id="art" style="display: none;" src="assets/img/card/art.png">
+        <img id="bg1" style="display: none;" src="assets/img/card/blank.png">
+        <img id="border" style="display: none;" src="assets/img/card/border.png">
+        <img id="frostgrave_hero" style="display: none;" src="assets/img/card/frostgrave_hero.png">
+        <img id="stargrave_hero" style="display: none;" src="assets/img/card/stargrave_hero.png">
+        <img id="frostgrave_spell" style="display: none;" src="assets/img/card/frostgrave_spell.png">
+        <img id="stargrave_ability" style="display: none;" src="assets/img/card/stargrave_ability.png">
+        <img id="frostgrave_weapon" style="display: none;" src="assets/img/card/frostgrave_weapon.png">
+        <img id="stargrave_weapon" style="display: none;" src="assets/img/card/stargrave_weapon.png">
+        <img id="frostgrave_soldier" style="display: none;" src="assets/img/card/frostgrave_soldier.png">
+        <img id="stargrave_soldier" style="display: none;" src="assets/img/card/stargrave_soldier.png">
+        <img id="m_img" style="display: none;" src="assets/img/card/m.png">
+        <img id="f_img" style="display: none;" src="assets/img/card/f.png">
+        <img id="s_img" style="display: none;" src="assets/img/card/s.png">
+        <img id="a_img" style="display: none;" src="assets/img/card/a.png">
+        <img id="w_img" style="display: none;" src="assets/img/card/w.png">
+        <img id="h_img" style="display: none;" src="assets/img/card/h.png">
+        <img id="g_img" style="display: none;" src="assets/img/card/g.png">
+        <img id="r_img" style="display: none;" src="assets/img/card/r.png">
+        <img id="d_img" style="display: none;" src="assets/img/card/d.png">
+        <img id="cost_img" style="display: none;" src="assets/img/card/cost.png">
+
+
+        <canvas class="canvas rounded" id="canvas" width="822" height="1122 ">
+            Sorry, your browser doesn't support the &lt;canvas&gt; element.
+        </canvas>
+    </div>
+
+    <div class="col-lg-5 scroll-area-fade">
+        <div class="scroll-area">
+            <div class="accordion">
+
+                {% include card/section-characteristics.html %}
+                {% include card/section-image.html %}
+
+
+            </div>
+
+            {% include card/section-actions.html %}
+
+        </div>
+    </div>
+
+</div>

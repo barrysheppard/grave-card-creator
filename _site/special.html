@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="date=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+        content="initial-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no, width=device-width">
+    <title>Blood Bowl Card Creator</title>
+    <meta name="color-scheme" content="dark light">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicons/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#ff0000">
+    <meta name="msapplication-TileColor" content="#ff0000">
+    <meta name="theme-color" content="#ff0000">
+</head>
+
+<body>
+    <div class="font-hack2 sr-only" style="font-family:'built-titling';visibility:hidden;">Nothing to see here, move
+        along…</div>
+    <div class="font-hack3 sr-only" style="font-family:'brothers-regular';visibility:hidden;">Nothing to see here, move
+        along…</div>
+    <div class="font-hack3 sr-only" style="font-family:'franklin-gothic-book';visibility:hidden;">Nothing to see here, move
+        along…</div>
+
+    <div class="container-fluid">
+
+        <nav class="mt-2 navbar navbar-expand-lg p-0">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://optimalgamestate.com"><img src="assets/img/ogs_logo.png"
+                                width="150" height="30"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" onclick="onClearCache()">Players</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="special.html" onclick="onClearCache()">Special Cards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="playbook.html" onclick="onClearCache()">Plays</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="instructions.html" onclick="onClearCache()">Instructions</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+
+        <div class="row mt-3">
+
+    <div class="col-lg-4">
+        <img id="art" style="display: none;" src="assets/img/special/art.png">
+        <img id="bg1" style="display: none;" src="assets/img/special/bloodbowl_specialplays.png">
+        <img id="frame" style="display: none;" src="assets/img/special/bloodbowl_frame.png">
+        <img id="star_frame" style="display: none;" src="assets/img/special/bloodbowl_specialplayer_frame.png">
+        <img id="border" style="display: none;" src="assets/img/special/bloodbowl_border.png">
+        <img id="sf-" style="display: none;" src="assets/img/special/numbers/sf-.png">
+        <img id="sf+" style="display: none;" src="assets/img/special/numbers/sf+.png">
+        <img id="sf0" style="display: none;" src="assets/img/special/numbers/sf0.png">
+        <img id="sf1" style="display: none;" src="assets/img/special/numbers/sf1.png">
+        <img id="sf2" style="display: none;" src="assets/img/special/numbers/sf2.png">
+        <img id="sf3" style="display: none;" src="assets/img/special/numbers/sf3.png">
+        <img id="sf4" style="display: none;" src="assets/img/special/numbers/sf4.png">
+        <img id="sf5" style="display: none;" src="assets/img/special/numbers/sf5.png">
+        <img id="sf6" style="display: none;" src="assets/img/special/numbers/sf6.png">
+        <img id="sf7" style="display: none;" src="assets/img/special/numbers/sf7.png">
+        <img id="sf8" style="display: none;" src="assets/img/special/numbers/sf8.png">
+        <img id="sf9" style="display: none;" src="assets/img/special/numbers/sf9.png">
+
+
+        <canvas class="canvas rounded" id="canvas" width="822" height="1122 ">
+            Sorry, your browser doesn't support the &lt;canvas&gt; element.
+        </canvas>
+    </div>
+
+    <div class="col-lg-5 scroll-area-fade">
+        <div class="scroll-area">
+            <div class="accordion">
+
+                
+<div class="card">
+
+    <div class="card-header" id="fightersHeadingFive">
+        <h2 class="h5 mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#fightersCollapseFive"
+                aria-expanded="false" aria-controls="fightersCollapseFive">
+                Card Details
+            </button>
+        </h2>
+    </div>
+
+    <div class="collapse" id="fightersCollapseFive">
+        <div class="card-body">
+
+            <div class="form-group">
+                <label for="cardName">Card Name</label>
+                <input class="form-control" type="text" id="cardName" name="cardName" value="" oninput="onAnyChange()">
+            </div>
+
+            <div class="form-group">
+                <label for="fontSizeSelector">Font Size:</label>
+                <input class="form-control" type="number" id="fontSizeSelector" name="fontSizeSelector" value="32" oninput="onAnyChange()">
+            </div>
+
+            <div class="form-group">
+                <label for="cardText">Body Text</label>
+                <textarea class="form-control" id="cardText" name="cardText" rows="3"
+                    oninput="onAnyChange()">Body Text</textarea>
+            </div>
+
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="timingCheckbox" onchange="onAnyChange()">
+                <label class="form-check-label" for="timingCheckbox">Timing</label>
+            </div>
+
+            <div class="form-group">
+                <label for="timingText">Timing Text</label>
+                <textarea class="form-control" id="timingText" name="timingText" rows="3" oninput="onAnyChange()"></textarea>
+            </div>
+
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="durationCheckbox" onchange="onAnyChange()">
+                <label class="form-check-label" for="durationCheckbox">Duration</label>
+            </div>
+
+            <div class="form-group">
+                <label for="durationText">Duration Text</label>
+                <textarea class="form-control" id="durationText" name="durationText" rows="3" oninput="onAnyChange()"></textarea>
+            </div>
+
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="effectCheckbox" onchange="onAnyChange()">
+                <label class="form-check-label" for="effectCheckbox">Effect</label>
+            </div>
+
+            <div class="form-group">
+                <label for="effectText">Effect Text</label>
+                <textarea class="form-control" id="effectText" name="effectText" rows="3" oninput="onAnyChange()"></textarea>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="footer">Footer</label>
+                    <input class="form-control" type="text" id="footer" name="footer" value="" oninput="onAnyChange()">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+                <div class="card">
+
+    <div class="card-header" id="fightersHeadingTwo">
+        <h2 class="h5 mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#fightersCollapseTwo" aria-expanded="false"
+                aria-controls="fightersCollapseTwo">
+                Bonus image
+            </button>
+        </h2>
+    </div>
+
+    <div class="collapse" id="fightersCollapseTwo">
+        <div class="card-body">
+
+            <div class="form-group">
+                <label for="imageSelect">Load image</label>
+                <input class="form-control-file" id="imageSelect" oninput="onFighterImageUpload()" type="file">
+            </div>
+
+            <input type="hidden" id="fighterImageUrl" name="fighterImageUrl" value="">
+
+            <div class="form-group">
+                <label for="imageOffsetX">X offset (&#8596;)</label>
+                <input class="form-control" id="imageOffsetX" oninput="onAnyChange()" type="number" value="0" />
+            </div>
+
+            <div class="form-group">
+                <label for="imageOffsetY">Y offset (&#8597;)</label>
+                <input class="form-control" id="imageOffsetY" oninput="onAnyChange()" type="number" value="0" />
+            </div>
+
+            <div class="form-group">
+                <label for="imageScalePercent">Scale (%)</label>
+                <input class="form-control" id="imageScalePercent" min="0" max="300" oninput="onAnyChange()"
+                    type="number" value="100" />
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+            </div>
+
+            
+<div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="removeBorder" onchange="onAnyChange()">
+    <label class="form-check-label" for="removeBorder">Remove border to add bleed area for printing</label>
+</div>
+<div class="mt-4">
+    <button type="submit" class="btn btn-success" id="saveCanvasButton" onclick="saveCardAsImage()">
+        Save card as image
+    </button>
+</div>
+
+<div class="mt-4">
+    <button type="submit" class="btn btn-success" id="saveButton" onclick="onSaveClicked()">
+        Save card as file
+    </button>
+</div>
+
+<div class="mt-4">
+    <label for="loadbutton">Load card file</label>
+    <input class="form-control-file" id="loadbutton" oninput="fileChange(this.files[0])" type="file">
+</div>
+
+<div class="mt-4">
+    <button type="submit" class="btn btn-success" id="clearCacheButton" onclick="onClearCache()">
+        Reset all
+    </button>
+</div>
+
+<div class="input-group mb-6 mt-2">
+    <br>
+    <br>
+</div>
+
+        </div>
+    </div>
+
+</div>
+
+    </div>
+
+    <script src="assets/vendors/jquery.js"></script>
+    <script src="assets/vendors/popper.min.js"></script>
+    <script src="assets/vendors/bootstrap.min.js"></script>
+    <script src="assets/js/special.js"></script>
+
+</body>
+
+</html>
