@@ -622,6 +622,11 @@ function drawNumber(num, x, y){
 
     // Set the initial font size
     var fontSize = 50;
+    
+    // Adjust font size if number of characters is greater than 2
+    if (num.length > 2) {
+        fontSize = 40; // Set a smaller font size
+    }
     ctx.font = fontSize + 'px Montserrat'; // Ensure 'Montserrat' font is available
 
     var pos = { x: x, y: y };
